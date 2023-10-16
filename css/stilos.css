@@ -1,0 +1,450 @@
+
+@import url('https://fonts.googleapis.com/css2? family= Poppins:ital,wght@0,300;0,600;0,700;1,300 & display=swap');
+
+body{
+    font-family: 'poppins' sans-serif;
+}
+
+
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(246, 246, 248);
+    padding: 10px 20px;
+    
+}
+
+.contact-info {
+    font-size: 20px;
+    text-align: left;
+    margin-right: auto;
+    margin-left: 30px
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    margin-right: 30px
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    margin-left: 25px;
+}
+
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+}
+
+.social-tooltip {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+
+
+.bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(235, 235, 250);
+    padding: 3px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    margin-left: 50px;
+}
+
+.logo-title img {
+    max-width: 140px;
+    max-height: 150px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: hsl(241, 95%, 50%);
+    font-size: 25px;
+}
+
+.menu a.active {
+    font-weight: bold;
+    color: #ff6600;
+}
+
+h1 {
+    margin: 10;
+}
+
+  
+
+.container {
+    background-image: url('../imagenes/imagen.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(17, 2, 2);
+    padding: 15px;
+    text-align: center;
+    margin: 3px 0;
+    margin-bottom: 3px;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+}
+
+.titulo {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.subtitulo {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.parrafo {
+    font-size: 16px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.boton {
+    background-color: rgb(12, 194, 240);
+    color: rgb(10, 0, 0);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin: 50px auto;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+.boton:hover {
+    background-color: rgb(100, 100, 238);
+}
+
+
+
+.seccion-cliente {
+    background-color: #f5f5f5;
+    padding: 3px;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+.seccion-cliente h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+
+.seccion-cliente {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+
+.comentarios {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comentario {
+    flex: 0 0 calc(33.33% - 20px);
+    background-color: white;
+    padding: 30px;
+    text-align: left;
+    margin-right: 30px;
+    border: 5px solid #ddd;
+}
+
+h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+
+.servicios.container {
+    text-align: center;
+    padding: 10px;
+}
+
+
+.servicios h2 {
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.servicios p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+
+.servicios .Servicios-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+
+.servicios .blog-1 {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    background-color: #ecdede;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.servicios .blog-1 img {
+    max-width: 150px;
+    height: auto;
+}
+
+
+.servicios .blog-1 h3 {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+
+.servicios .blog-1 p {
+    font-size: 14px;
+    margin: 0;
+}
+
+
+.btn-1 {
+    background-color: rgb(37, 22, 241);
+    display: inline-block;
+    color: #030303;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 20px;
+}
+
+
+.btn-1:hover {
+    background-color: #680870;
+    color: #ee1010;
+}
+
+
+
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 25px;
+    right: 5px;
+    z-index: 1000;
+}
+
+.whatsapp-button a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+}
+
+.whatsapp-button a img {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+
+.whatsapp-button a::before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #30e67b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+
+.tooltip {
+    background-color: #30e67b;
+    color: #020202;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 17px;
+    position: absolute;
+    top: -35px;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+
+img:hover + .tooltip {
+    opacity: 1;
+}
+
+
+
+
+.pie-de-pagina {
+    background-color: #e3ebde;
+    color: rgb(10, 10, 10);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.formulario, .direccion, .derechos {
+    margin-top: 20px;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 600px;
+}
+
+.formulario h2 {
+    margin: 0;
+}
+
+.formulario .campo {
+    margin: 10px 0;
+}
+
+.formulario label {
+    display: block;
+}
+
+.formulario input, .formulario textarea {
+    width: 100%;
+    padding: 5px;
+}
+
+.direccion {
+    color: #000;
+    table {
+        width: 100%;
+    }
+}
+
+.derechos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.izquierda {
+    flex: 1;
+    text-align: left;
+}
+
+.derecha {
+    flex: 1;
+    text-align: right;
+}
+
+.derechos .negro-claro {
+    color: #070202;
+}
+
+
+.formulario button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+    background-color: #ff9900;
+}
+
+
+.direccion p, .derechos p, .derechos a {
+    color: #000;
+}
+
+
+
+.derechos a {
+    font-weight: bold;
+}
+
+.derechos a:hover {
+    text-decoration: underline;
+}
+
+
