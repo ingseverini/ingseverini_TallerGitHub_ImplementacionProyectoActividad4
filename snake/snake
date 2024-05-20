@@ -1,0 +1,72 @@
+
+class SnakeGame:
+    def __init__(self):
+        self.window = tk.Tk()
+        self.window.title("Snake Game")
+        self.canvas = tk.Canvas(self.window, width=400, height=400, bg="black")
+        self.canvas.pack()
+        self.window.bind("<Key>", self.change_direction)
+        self.direction = "Right"
+        self.snake = [(200, 200), (190, 200), (180, 200)]
+        self.food = self.create_food()
+        self.score = 0
+        self.game_speed = 100
+        self.game_over = False
+        self.draw_snake()
+        self.move()
+
+    def draw_snake(self):
+        self.canvas.delete("snake", "food")
+        for x, y in self.snake:
+            self.canvas.create_rectangle(x, y, x + 10, y + 10, fill="green", tags="snake")
+        self.canvas.create_oval(self.food[0], self.food[1], self.food[0] + 10, self.food[1] + 10, fill="red", tags="food")
+
+    def create_food(self):
+        x = random.randrange(0, 400, 10)
+        y = random.randrange(0, 400, 10)
+        return x, y
+
+    def check_collision(self):
+        if self.snake[0] in self.snake[1:] or \
+                self.snake[0][0] < 0 or self.snake[0][0] >= 400 or \
+                self.snake[0][1] < 0 or self.snake[0][1] >= 400:
+            self.game_over = True
+
+    def change_direction(self, event):
+        key = event.keysym
+        if key == "Up" and self.direction != "Down":
+            self.direction = "Up"
+        elif key == "Down" and self.direction != "Up":
+            self.direction = "Down"
+        elif key == "Left" and self.direction != "Right":
+            self.direction = "Left"
+        elif key == "Right" and self.direction != "Left":
+            self.direction = "Right"
+
+    def move(self):
+        if not self.game_over:
+            head_x, head_y = self.snake[0]
+            if self.direction == "Up":
+                head_y -= 10
+            elif self.direction == "Down":
+                head_y += 10
+            elif self.direction == "Left":
+                head_x -= 10
+            elif self.direction == "Right":
+                head_x += 10
+            self.snake.insert(0, (head_x, head_y))
+
+            if head_x == self.food[0] and head_y == self.food[1]:
+                self.score += 10
+                self.food = self.create_food()
+            else:
+                self.snake.pop()
+
+            self.draw_snake()
+            self.check_collision()
+            self.window.after(self.game_speed, self.move)
+        else:
+            self.canvas.create_text(200, 200, text=f"Game Over! Score: {self.score}", fill="white", font=("Arial", 20))
+
+game = SnakeGame()
+game.window.mainloop()
